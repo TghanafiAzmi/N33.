@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -12,15 +12,60 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Custom cursor using SVG data URL */
+html,
+body,
+* {
+  cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E") 16 16,
+    auto;
+}
+
+/* Bigger cursor when hover clickable item */
+a:hover,
+button:hover {
+  cursor: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='18' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E") 24 24,
+    pointer;
+}
+
+/* Filled cursor when clicking */
+a:active,
+button:active,
+body:active {
+  cursor: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='18' fill='rgba(255,255,255,0.18)' stroke='white' stroke-width='2'/%3E%3C/svg%3E") 24 24,
+    pointer;
+}
+
+/* Mobile/tablet: use normal cursor */
+@media (max-width: 768px) {
+  html,
+  body,
+  * {
+    cursor: auto;
+  }
 }
