@@ -21,9 +21,9 @@ export default function Home() {
         <header className="relative z-10 flex items-center px-6 py-7 md:px-12">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="h-6 w-6 rounded-br-full rounded-tl-full bg-white" />
+            <div/>
             <div>
-              <span className="text-lg font-bold tracking-wide">n33.</span>
+              <span className="text-lg font-bold tracking-wide">N33.</span>
               <span className="ml-3 hidden text-xs tracking-[0.25em] text-white/50 md:inline">
                 DIGITAL STUDIO
               </span>
@@ -66,7 +66,7 @@ export default function Home() {
   </h1>
 
   <p className="mt-5 max-w-xl text-sm leading-7 text-white/55 md:text-base">
-    n33. creates websites, systems, e-commerce experiences and digital
+    N33. creates websites, systems, e-commerce experiences and digital
     tools for brands that want to look sharper and work smarter.
   </p>
 </div>
